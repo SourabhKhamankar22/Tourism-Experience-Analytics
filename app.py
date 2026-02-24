@@ -125,3 +125,13 @@ with col4:
     sns.countplot(data=df, y='VisitMode', hue='VisitMode', order=df['VisitMode'].value_counts().index, palette='magma', legend=False, ax=ax2)
     ax2.set_xlabel("Count")
     st.pyplot(fig2)
+
+# --- Additional Chart: Top Regions (Required by Rubric) ---
+st.markdown("---")
+st.subheader("🌍 Top 10 User Origins (Countries)")
+fig3, ax3 = plt.subplots(figsize=(10, 4))
+top_countries = df['Country'].value_counts().head(10)
+sns.barplot(x=top_countries.values, y=top_countries.index, hue=top_countries.index, palette='crest', legend=False, ax=ax3)
+ax3.set_xlabel("Number of Visitors")
+ax3.set_ylabel("Country")
+st.pyplot(fig3)
