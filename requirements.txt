@@ -1,9 +1,9 @@
 streamlit
 pandas
-numpy
+numpy<2.0.0
+joblib
+matplotlib
+seaborn
 scikit-learn
 lightgbm
 scikit-surprise
-matplotlib
-seaborn
-joblib
